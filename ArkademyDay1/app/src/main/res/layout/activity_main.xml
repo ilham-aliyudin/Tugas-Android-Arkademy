@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_border_background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_to_activityB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_second"
+        android:padding="15dp"
+        android:text="@string/ke_activity_2"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_to_activity_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_third"
+        android:padding="15dp"
+        android:text="@string/ke_activity_linearlayout"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_to_activity_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_fourth"
+        android:padding="15dp"
+        android:text="@string/ke_activity_relativelayout"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_to_activity_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_fifth"
+        android:padding="15dp"
+        android:text="@string/ke_activity_framelayout"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_to_activity_constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_sixth"
+        android:padding="15dp"
+        android:text="@string/ke_activity_ConstraintLayout"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Arkademy Day-1</string>
+    <string name="ke_activity_2">Ke Activity Kedua</string>
+    <string name="ke_activity_pertama">Ke Activity Pertama</string>
+    <string name="ini_activity_pertama">Ini Activity Pertama</string>
+    <string name="ini_activity_ke_2">Ini Activity Kedua</string>
+    <string name="ke_activity_linearlayout">Ke Activity LinearLayout</string>
+    <string name="ke_activity_relativelayout">Ke Activity RelativeLayout</string>
+    <string name="ke_activity_framelayout">Ke Activity FrameLayout</string>
+    <string name="ke_activity_ConstraintLayout">Ke Activity ConstraintLayout</string>
+    <string name="ini_activity_dengan_relativelayout">Ini Activity dengan RelativeLayout</string>
+    <string name="hello">Hello, </string>
+    <string name="namamu"> namamu</string>
+    <string name="mark"> !!</string>
+    <string name="ini_adalah_intent_dengan_data">Ini adalah Intent dengan data</string>
+    <string name="ini_adalah_activity_framelayout">Ini adalah Activity FrameLayout</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="testimage">testImage</string>
+</resources>
