@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ProfilActivity"></activity>
-        <activity android:name=".ConstraintLayoutActivity" />
-        <activity android:name=".RelativeLayoutActivity" />
-        <activity android:name=".FrameLayoutActivity" />
-        <activity android:name=".LinearLayoutActivity" />
-        <activity android:name=".MainActivity2" />
+        <activity android:name=".activity.GreetingActivity"></activity>
+        <activity android:name=".activity.ConstraintLayoutActivity" />
+        <activity android:name=".activity.RelativeLayoutActivity" />
+        <activity android:name=".activity.FrameLayoutActivity" />
+        <activity android:name=".activity.LinearLayoutActivity" />
+        <activity android:name=".activity.SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

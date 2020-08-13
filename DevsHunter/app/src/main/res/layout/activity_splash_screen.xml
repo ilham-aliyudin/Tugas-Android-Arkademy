@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.SplashScreenActivity">
+
+    <ImageView
+        android:id="@+id/iv_splash_icon"
+        android:layout_width="411dp"
+        android:layout_height="149dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_baseline_developer_mode_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_splash_bottom_to_mid"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_splash_icon"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Devs Hunter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_splash_icon"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/tv_by"
+        android:layout_width="67dp"
+        android:layout_height="21dp"
+        android:gravity="center"
+        android:text="by"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <ImageView
+        android:id="@+id/iv_arkademy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_by"
+        app:layout_constraintStart_toStartOf="@+id/tv_by"
+        app:layout_constraintTop_toBottomOf="@+id/tv_by"
+        android:transitionName="imageTransition"
+        app:srcCompat="@drawable/arkademy" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
