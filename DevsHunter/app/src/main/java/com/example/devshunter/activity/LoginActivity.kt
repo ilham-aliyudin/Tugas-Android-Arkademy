@@ -10,8 +10,6 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var animation: Animation
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -24,7 +22,9 @@ class LoginActivity : AppCompatActivity() {
     private fun setAnimation() {
         val animationToLeft = AnimationUtils.loadAnimation(this, R.anim.left)
         val animationToRight = AnimationUtils.loadAnimation(this, R.anim.right)
-        iv_login.startAnimation(animationToLeft)
+        val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        iv_login.startAnimation(animationFadeIn)
         tv_welcome_back.startAnimation(animationToRight)
+        tv_please_log_in.startAnimation(animationToLeft)
     }
 }

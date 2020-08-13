@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.example.devshunter.R
 import com.example.devshunter.models.UserProfile
 import kotlinx.android.synthetic.main.activity_profile.*
-import kotlinx.android.synthetic.main.fragment_personal.*
 
 class ProfileActivity : AppCompatActivity() {
 

@@ -19,12 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_join_us" />
+        app:srcCompat="@drawable/ic_developer" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="200dp"
-        android:layout_height="590dp"
+        android:layout_height="450dp"
         android:background="@drawable/bg_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.20">
+        app:layout_constraintVertical_bias="0.25">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,19 +63,6 @@
             android:gravity="center"
             android:orientation="vertical"
             android:padding="5dp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.Design.TextInputLayout.Outlined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:startIconDrawable="@drawable/ic_baseline_supervised_user_circle_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_fullname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Fullname" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Design.TextInputLayout.Outlined"
@@ -147,16 +134,16 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="0.65999997" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already Have An Account? "
+        android:text="Ready To Be Part Of Us? "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.97" />
@@ -165,26 +152,13 @@
         android:id="@+id/tv_regis_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="Sign Up As Developer"
         android:textColor="@color/colorYellowDark"
-        android:textSize="17sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_register_as_dev"
-        android:layout_width="253dp"
-        android:layout_height="62dp"
-        android:text="Ke Form Input"
-        android:textColor="@android:color/white"
-        android:textColorHighlight="@color/colorYellowDark"
-        app:backgroundTint="@color/colorYellowDark"
-        app:cornerRadius="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_register"
-        app:layout_constraintStart_toStartOf="@+id/btn_register"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

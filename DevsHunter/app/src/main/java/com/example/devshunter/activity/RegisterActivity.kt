@@ -14,12 +14,12 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_register)
 
 //        setAnimation()
-       btn_register_as_dev.setOnClickListener(this)
+       tv_regis_sign_in.setOnClickListener(this)
     }
 
     override fun onClick(p0: View) {
        when(p0.id) {
-           R.id.btn_register_as_dev -> {
+           R.id.tv_regis_sign_in -> {
                 startActivity(Intent(this, RegisterAsDevsActivity::class.java))
            }
        }

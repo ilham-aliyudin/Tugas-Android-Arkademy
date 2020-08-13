@@ -16,11 +16,8 @@ class IntroSliderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
-        IntroSliderModel.getIntroData()
         setIntroSlider()
-        window.exitTransition = null
-        window.enterTransition = null
-
+        IntroSliderModel.getIntroData()
         btn_skip.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
