@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.devshunter.R
-import com.example.devshunter.adapters.ProfileFragmentAdapter
 import com.example.devshunter.models.UserProfile
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.fragment_personal.*
