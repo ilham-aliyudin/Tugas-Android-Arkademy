@@ -13,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arkademy" />
+        app:srcCompat="@drawable/self_taught" />
 
     <RelativeLayout
         android:layout_width="200dp"
@@ -47,11 +47,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.29000002">
+        app:layout_constraintVertical_bias="0.25">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
             android:orientation="vertical"
@@ -139,7 +139,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <TextView
         android:id="@+id/textView6"

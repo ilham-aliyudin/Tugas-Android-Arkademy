@@ -1,6 +1,6 @@
 package com.example.devshunter.activity
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.devshunter.R
@@ -24,8 +24,5 @@ class ProfileActivity : AppCompatActivity() {
         tv_profile_adress.text = getData.adress
         tv_profile_contact.text = getData.contact
         tv_profile_jobdesc.text = getData.job
-        iv_to_setting.setOnClickListener {
-            startActivity(Intent(this, FormActivity::class.java))
-        }
     }
 }
