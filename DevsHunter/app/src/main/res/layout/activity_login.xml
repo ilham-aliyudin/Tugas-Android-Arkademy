@@ -9,6 +9,7 @@
     android:background="#51997F9E"
     android:orientation="vertical"
     android:padding="5dp"
+    android:theme="@style/AppTheme.Material"
     tools:context=".activity.LoginActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -99,8 +100,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/firamono_bold"
-                app:cornerRadius="20dp"
-                android:text="@string/log_in" />
+                app:cornerRadius="10dp"
+                android:text="@string/log_in"
+                android:backgroundTint="@color/colorYellowDark"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -144,6 +146,7 @@
         app:iconSize="30dp"
         android:layout_gravity="center"
         android:gravity="center"
-        app:cornerRadius="20dp"
-        android:text="Login With Google"/>
+        app:cornerRadius="10dp"
+        android:text="Login With Google"
+        android:backgroundTint="@color/colorYellowDark"/>
 </LinearLayout>

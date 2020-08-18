@@ -16,18 +16,14 @@
     </style>
 
     <style name="Widget.Design.TextInputLayout.Outlined" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxCornerRadiusTopStart">50dp</item>
-        <item name="boxCornerRadiusBottomStart">50dp</item>
-        <item name="boxCornerRadiusTopEnd">50dp</item>
-        <item name="boxCornerRadiusBottomEnd">50dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
         <item name="errorEnabled">true</item>
         <item name="boxStrokeColor">#730385</item>
         <item name="hintTextColor">@color/colorBlue</item>
         <item name="fontFamily">@font/firamono_regular</item>
-    </style>
-
-    <style name="Widget.Material.CardView" parent="@style/Widget.MaterialComponents.CardView">
-
     </style>
 </resources>
 
