@@ -10,18 +10,12 @@ import com.example.devshunter.animation.ViewPagerSliderTransformation
 import com.example.devshunter.models.IntroSliderModel
 import kotlinx.android.synthetic.main.activity_intro.*
 
-class IntroSliderActivity : AppCompatActivity() {
-
+class IntroSliderActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_intro)
 
         setIntroSlider()
         IntroSliderModel.getIntroData()
-        btn_skip.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
     }
 
     private fun setIntroSlider() {
@@ -29,5 +23,20 @@ class IntroSliderActivity : AppCompatActivity() {
         vp_container.adapter = IntroSliderAdapter(IntroSliderModel.getIntroData())
         indicator.setViewPager(vp_container)
         vp_container.setPageTransformer(ViewPagerSliderTransformation(offscreenPageLimit))
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_intro
+    }
+
+    override fun initListener() {
+        btn_skip.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+    }
+
+    override fun setView() {
+        TODO("Not yet implemented")
     }
 }

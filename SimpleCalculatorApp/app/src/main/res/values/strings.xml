@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleCalculatorApp</string>
+    <string name="button_backspace">button_backspace</string>
+</resources>
