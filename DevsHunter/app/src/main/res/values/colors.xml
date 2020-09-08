@@ -7,4 +7,12 @@
     <color name="colorYellowDark">#AD45E1</color>
     <color name="colorWhiteTransparance">#8A16251F</color>
     <color name="colorAllBacakground">#00FF0000</color>
+    <color name="primaryColor">#ab47bc</color>
+    <color name="primaryLightColor">#df78ef</color>
+    <color name="primaryDarkColor">#790e8b</color>
+    <color name="secondaryColor">#d500f9</color>
+    <color name="secondaryLightColor">#ff5bff</color>
+    <color name="secondaryDarkColor">#9e00c5</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#f3e5f5</color>
 </resources>

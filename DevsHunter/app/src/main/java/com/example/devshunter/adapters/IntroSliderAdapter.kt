@@ -10,12 +10,13 @@ import com.example.devshunter.R
 import com.example.devshunter.models.IntroSliderModel
 import kotlinx.android.synthetic.main.item_slider.view.*
 
-class IntroSliderAdapter(val listIntroSlider: ArrayList<IntroSliderModel>): RecyclerView.Adapter<IntroSliderAdapter.MyIntroSLiderViewHolder>() {
+class IntroSliderAdapter(private val listIntroSlider: ArrayList<IntroSliderModel>): RecyclerView.Adapter<IntroSliderAdapter.MyIntroSLiderViewHolder>() {
 
-     inner class MyIntroSLiderViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+     class MyIntroSLiderViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
          private var image: ImageView = itemView.iv_intro_image
          private var title: TextView = itemView.tv_intro_title
          private var description: TextView  = itemView.tv_intro_desc
+
          fun bind(listIntro: IntroSliderModel) {
              image.setImageResource(listIntro.image)
              title.text = listIntro.title

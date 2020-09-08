@@ -25,10 +25,13 @@ class LoginActivity : BaseActivity() {
         btn_sign_in.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+
+        btn_login.setOnClickListener {
+            startActivity(Intent(this, DashboardActivity::class.java))
+        }
     }
 
     override fun setView() {
-        TODO("Not yet implemented")
     }
 
     private fun setAnimation() {

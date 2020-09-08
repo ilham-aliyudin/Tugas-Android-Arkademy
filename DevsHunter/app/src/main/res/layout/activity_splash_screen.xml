@@ -1,63 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".activity.SplashScreenActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/iv_splash_icon"
-        android:layout_width="411dp"
-        android:layout_height="149dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_baseline_developer_mode_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <TextView
-        android:id="@+id/tv_splash_bottom_to_mid"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/iv_splash_icon"
-        android:layout_centerInParent="true"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:text="Devs Hunter"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_splash_icon"
-        app:layout_constraintVertical_bias="0.050000012" />
+        android:orientation="vertical"
+        tools:context=".activity.SplashScreenActivity">
 
-    <TextView
-        android:id="@+id/tv_by"
-        android:layout_width="67dp"
-        android:layout_height="21dp"
-        android:gravity="center"
-        android:text="by"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.889" />
+        <ImageView
+            android:id="@+id/iv_splash_icon"
+            android:layout_width="411dp"
+            android:layout_height="149dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/nodesc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_email_24" />
 
-    <ImageView
-        android:id="@+id/iv_arkademy"
-        android:layout_width="89dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="8dp"
-        android:transitionName="imageTransition"
-        app:layout_constraintEnd_toEndOf="@+id/tv_by"
-        app:layout_constraintStart_toStartOf="@+id/tv_by"
-        app:layout_constraintTop_toBottomOf="@+id/tv_by"
-        app:srcCompat="@drawable/self_taught" />
+        <TextView
+            android:id="@+id/tv_splash_bottom_to_mid"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_splash_icon"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Devs Hunter"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_splash_icon"
+            app:layout_constraintVertical_bias="0.050000012" />
+
+        <TextView
+            android:id="@+id/tv_by"
+            android:layout_width="67dp"
+            android:layout_height="21dp"
+            android:gravity="center"
+            android:text="by"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.889" />
+
+        <ImageView
+            android:id="@+id/iv_arkademy"
+            android:layout_width="89dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_by"
+            app:layout_constraintStart_toStartOf="@+id/tv_by"
+            app:layout_constraintTop_toBottomOf="@+id/tv_by"
+            app:srcCompat="@drawable/self_taught"
+            android:contentDescription="@string/nodesc" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

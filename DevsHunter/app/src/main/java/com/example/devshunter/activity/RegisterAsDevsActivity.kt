@@ -38,6 +38,5 @@ class RegisterAsDevsActivity : BaseActivity() {
     }
 
     override fun setView() {
-        TODO("Not yet implemented")
     }
 }
