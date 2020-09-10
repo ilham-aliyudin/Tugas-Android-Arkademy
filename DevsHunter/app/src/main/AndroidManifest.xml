@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.devshunter">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Material">
-        <activity android:name=".activity.DashboardActivity"/>
-        <activity android:name=".activity.RegisterAsDevsActivity" />
-        <activity android:name=".activity.ProfileActivity" />
-        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".ui.dashboard.DashboardActivity" />
+        <activity android:name=".ui.register.RegisterAsDevsActivity" />
+        <activity android:name=".ui.profile.ProfileActivity" />
+        <activity android:name=".ui.register.RegisterActivity" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:theme="@style/AppTheme.Material" />
-        <activity android:name=".activity.IntroSliderActivity" />
-        <activity android:name=".activity.SplashScreenActivity">
+        <activity android:name=".ui.introslider.IntroSliderActivity" />
+        <activity android:name=".ui.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.devshunter.activity
+package com.example.devshunter
 
 import android.content.Context
 import android.content.Intent

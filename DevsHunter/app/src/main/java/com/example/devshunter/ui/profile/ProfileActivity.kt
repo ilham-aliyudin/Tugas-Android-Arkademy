@@ -1,6 +1,7 @@
-package com.example.devshunter.activity
+package com.example.devshunter.ui.profile
 
 import com.example.devshunter.R
+import com.example.devshunter.BaseActivity
 import com.example.devshunter.models.UserProfile
 import kotlinx.android.synthetic.main.activity_profile.*
 

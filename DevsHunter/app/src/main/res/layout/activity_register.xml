@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#51997F9E"
-        tools:context=".activity.RegisterActivity">
+        tools:context=".ui.register.RegisterActivity">
 
 
         <ImageView
@@ -29,13 +29,13 @@
 
         <RelativeLayout
             android:id="@+id/relativeLayout2"
-            android:layout_width="200dp"
+            android:layout_width="0dp"
             android:layout_height="450dp"
             android:background="@drawable/bg_register"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_regis_sign_in"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.13999999">
+            app:layout_constraintVertical_bias="0.24000001">
 
             <TextView
                 android:id="@+id/textView4"
@@ -51,16 +51,16 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardView5"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
             app:cardCornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.25">
+            app:layout_constraintVertical_bias="0.32">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,12 +135,11 @@
             android:textColorHighlight="@color/colorYellowDark"
             app:backgroundTint="@color/colorYellowDark"
             app:cornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cardView5"
-            app:layout_constraintVertical_bias="0.55" />
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
+            app:layout_constraintStart_toStartOf="@+id/cardView5"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView6"

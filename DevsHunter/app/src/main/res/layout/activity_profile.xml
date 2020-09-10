@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="#164A1C1C"
         android:orientation="vertical"
-        tools:context=".activity.ProfileActivity">
+        tools:context=".ui.profile.ProfileActivity">
 
 
         <LinearLayout

@@ -1,25 +1,25 @@
-package com.example.devshunter.activity
+package com.example.devshunter.ui.introslider
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.devshunter.R
+import com.example.devshunter.BaseActivity
+import com.example.devshunter.ui.login.LoginActivity
 import com.example.devshunter.adapters.IntroSliderAdapter
 import com.example.devshunter.animation.ViewPagerSliderTransformation
 import com.example.devshunter.databinding.ActivityIntroBinding
 import com.example.devshunter.models.IntroSliderModel
 import kotlinx.android.synthetic.main.activity_intro.*
 
-class IntroSliderActivity : BaseActivity() {
+class IntroSliderActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIntroBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, getLayoutId())
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_intro)
         IntroSliderModel.getIntroData()
-
         setIntroSlider()
         binding.btnSkip.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -29,20 +29,8 @@ class IntroSliderActivity : BaseActivity() {
 
     private fun setIntroSlider() {
         val offscreenPageLimit = 3
-        binding.apply {
-            vpContainer.adapter = IntroSliderAdapter(IntroSliderModel.getIntroData())
-            indicator.setViewPager(vpContainer)
-            vpContainer.setPageTransformer(ViewPagerSliderTransformation(offscreenPageLimit))
-        }
-    }
-
-    override fun getLayoutId(): Int {
-        return R.layout.activity_intro
-    }
-
-    override fun initListener() {
-    }
-
-    override fun setView() {
+            vp_container.adapter = IntroSliderAdapter(IntroSliderModel.getIntroData())
+            indicator.setViewPager(vp_container)
+            vp_container.setPageTransformer(ViewPagerSliderTransformation(offscreenPageLimit))
     }
 }

@@ -1,28 +1,36 @@
-package com.example.devshunter.activity
+package com.example.devshunter.ui.splashscreen
 
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.app.ActivityOptionsCompat
-import androidx.core.view.ViewCompat
 import com.example.devshunter.R
+import com.example.devshunter.BaseActivity
+import com.example.devshunter.ui.dashboard.DashboardActivity
+import com.example.devshunter.ui.introslider.IntroSliderActivity
+import com.example.devshunter.util.SharedPrefUtils
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : BaseActivity() {
+    companion object {
+        const val GET_BOOLEAN = "false"
+    }
+    private lateinit var pref: SharedPrefUtils
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         val handler = Handler()
-
+        pref = SharedPrefUtils(this)
         setAnimation()
+
         handler.postDelayed({
-            val intent = Intent(this, IntroSliderActivity::class.java)
-            startActivity(intent)
-            finish()
+            if(pref.getBooleanPref(GET_BOOLEAN)!!) {
+                startActivity(Intent(applicationContext, DashboardActivity::class.java))
+            } else {
+                startActivity(Intent(applicationContext, IntroSliderActivity::class.java))
+                finish()
+            }
         }, 4000)
     }
 
@@ -39,10 +47,6 @@ class SplashScreenActivity : BaseActivity() {
     override fun getLayoutId(): Int {
         return R.layout.activity_splash_screen
     }
-
-    override fun initListener() {
-    }
-
-    override fun setView() {
-    }
+    override fun initListener() {}
+    override fun setView() {}
 }

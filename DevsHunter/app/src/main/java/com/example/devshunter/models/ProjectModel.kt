@@ -2,22 +2,30 @@ package com.example.devshunter.models
 
 import com.example.devshunter.R
 
-data class ProjectModel(val image: Int, val project: String) {
-
+data class ProjectModel(val imageUrl: String, val project: String) {
     companion object {
-        var projectLIst = arrayListOf(
-            ProjectModel(R.drawable.photo, "PROJECT 1"),
-            ProjectModel(R.drawable.photo, "PROJECT 2"),
-            ProjectModel(R.drawable.photo, "PROJECT 3"),
-            ProjectModel(R.drawable.photo, "PROJECT 4"),
-            ProjectModel(R.drawable.photo, "PROJECT 5"),
-            ProjectModel(R.drawable.photo, "PROJECT 6"),
-            ProjectModel(R.drawable.photo, "PROJECT 8"),
-            ProjectModel(R.drawable.photo, "PROJECT 9"),
-            ProjectModel(R.drawable.photo, "PROJECT 10"),
-            ProjectModel(R.drawable.photo, "PROJECT 11"),
-            ProjectModel(R.drawable.photo, "PROJECT 12"),
-            ProjectModel(R.drawable.photo, "PROJECT 13"),
+        val projectList = arrayListOf(
+            ProjectModel("https://picsum.photos/150/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
+            ProjectModel("https://picsum.photos/55/55", "TES 1" ),
         )
     }
 }
