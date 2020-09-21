@@ -22,6 +22,7 @@ class ProjectAdapter( private val listProject: ArrayList<ProjectModel>): Recycle
                    .into(iv_project)
 
                tv_title.text = list.project
+               tv_descript.text = list.desc
            }
         }
     }

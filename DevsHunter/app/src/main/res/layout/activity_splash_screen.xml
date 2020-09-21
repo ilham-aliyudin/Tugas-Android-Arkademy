@@ -23,10 +23,10 @@
             android:contentDescription="@string/nodesc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_email_24" />
+            app:srcCompat="@drawable/ic_baseline_developer" />
 
         <TextView
             android:id="@+id/tv_splash_bottom_to_mid"
@@ -39,10 +39,11 @@
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_splash_icon"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/iv_splash_icon"
             app:layout_constraintTop_toBottomOf="@+id/iv_splash_icon"
-            app:layout_constraintVertical_bias="0.050000012" />
+            app:layout_constraintVertical_bias="0.021" />
 
         <TextView
             android:id="@+id/tv_by"
@@ -51,21 +52,22 @@
             android:gravity="center"
             android:text="by"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.889" />
+            app:layout_constraintEnd_toEndOf="@+id/tv_splash_bottom_to_mid"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/tv_splash_bottom_to_mid"
+            app:layout_constraintTop_toBottomOf="@+id/tv_splash_bottom_to_mid"
+            app:layout_constraintVertical_bias="0.729" />
 
         <ImageView
             android:id="@+id/iv_arkademy"
             android:layout_width="89dp"
             android:layout_height="39dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/nodesc"
             app:layout_constraintEnd_toEndOf="@+id/tv_by"
             app:layout_constraintStart_toStartOf="@+id/tv_by"
             app:layout_constraintTop_toBottomOf="@+id/tv_by"
-            app:srcCompat="@drawable/self_taught"
-            android:contentDescription="@string/nodesc" />
+            app:srcCompat="@drawable/self_taught" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

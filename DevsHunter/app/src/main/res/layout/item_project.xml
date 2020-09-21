@@ -6,8 +6,9 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
     android:background="@drawable/bg_item_project"
-    android:layout_gravity="center_horizontal"
-    android:padding="5dp">
+    android:padding="3dp"
+    android:layout_marginLeft="5dp"
+    android:layout_gravity="center_horizontal">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
@@ -40,20 +41,23 @@
 
             <TextView
                 android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TITLE"
                 android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_project"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.048"
                 app:layout_constraintStart_toStartOf="@+id/iv_project" />
 
             <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_descript"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:gravity="center"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"

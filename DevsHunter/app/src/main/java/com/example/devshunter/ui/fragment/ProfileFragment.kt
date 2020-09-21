@@ -8,6 +8,7 @@ import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.view.*
+import android.webkit.RenderProcessGoneDetail
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -18,7 +19,9 @@ import androidx.core.view.GravityCompat
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.bumptech.glide.load.model.ImageVideoWrapper
 import com.example.devshunter.R
+import com.example.devshunter.databinding.FragmentProfileBinding
 import com.example.devshunter.ui.login.LoginActivity
 import com.example.devshunter.util.SharedPrefUtils
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -31,31 +34,32 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         super.onViewCreated(view, savedInstanceState)
         pref = SharedPrefUtils(context)
         val navController = findNavController()
-//        val appBarConfiguration = AppBarConfiguration(navController.graph, view.profile_drawer)
-        view.toolbar_profile.setupWithNavController(navController)
+        toolbar_profile.setupWithNavController(navController)
+
         iv_menu.setOnClickListener {
             profile_drawer.openDrawer(GravityCompat.END)
+        }
+
+        iv_github.setOnClickListener {
+            setWebView()
         }
 
         drawer_menu.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.item_faq -> Toast.makeText(context, "FAQ Diklik", Toast.LENGTH_SHORT).show()
                 R.id.item_help -> Toast.makeText(context, "Help Diklik", Toast.LENGTH_SHORT).show()
-                R.id.item_about_us -> Toast.makeText(context, "About Us Diklik", Toast.LENGTH_SHORT).show()
+                R.id.item_about_us -> Toast.makeText(context, "About Us Diklik", Toast.LENGTH_SHORT)
+                    .show()
                 R.id.item_logout -> exitDialog()
             }
             return@setNavigationItemSelectedListener true
-        }
-
-        iv_github.setOnClickListener {
-            setWebView()
         }
     }
 
     private fun exitDialog() {
         val builder = AlertDialog.Builder(context)
         builder.apply {
-            setTitle("Are U Ready To Lose")
+            setTitle("Mau Kemana???")
             setMessage("Yakin Mau Keluar Kisanak??")
             setPositiveButton("Yes") { _: DialogInterface, _ ->
                 startActivity(Intent(context, LoginActivity::class.java))
@@ -67,11 +71,22 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     @SuppressLint("SetJavaScriptEnabled")
     fun setWebView() {
-        web!!.apply {
+        web.apply {
             loadUrl("https://github.com/ilham-aliyudin")
             settings.javaScriptEnabled = true
-            webViewClient = WebViewClient()
             webChromeClient = WebChromeClient()
+        }
+        web.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView?, url: String?) {
+                progress_bar?.visibility = View.GONE
+                web.visibility = View.VISIBLE
+                super.onPageFinished(view, url)
+            }
+
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                progress_bar?.visibility = View.VISIBLE
+                super.onPageStarted(view, url, favicon)
+            }
         }
     }
 }

@@ -40,17 +40,15 @@ class LoginActivity : AppCompatActivity() {
                     if (loginName == registName || loginPass == registPass) {
                         pref.saveBooleanPref(GET_BOOLEAN, true)
                         startActivity(Intent(applicationContext, DashboardActivity::class.java))
+                    } else {
+                        etEmailLogin.error = "Username Salah"
+                        etPasswordLogin.error = "Password Salah"
                     }
+                } else {
+                    etEmailLogin.error = "Username tidak boleh kosong"
+                    etPasswordLogin.error = "Password tidak boleh kosong"
                 }
             }
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        if (pref.getBooleanPref(GET_BOOLEAN)!!){
-            startActivity(Intent(applicationContext, DashboardActivity::class.java))
-            finish()
         }
     }
 }

@@ -4,23 +4,27 @@
     <item
         android:id="@+id/homeFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_apartment_24"
+        android:menuCategory="secondary"
+        android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/home" />
 
     <item
         android:id="@+id/offerFragment"
         android:enabled="true"
+        android:menuCategory="secondary"
         android:icon="@drawable/ic_offer"
         android:title="@string/offer" />
 
     <item
         android:id="@+id/projectFragment"
         android:icon="@drawable/ic_testing"
+        android:menuCategory="secondary"
         android:title="@string/project" />
 
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_profile"
+        android:menuCategory="secondary"
         android:title="@string/profile" />
 
 </menu>
