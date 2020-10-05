@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : BaseActivity() {
     companion object {
-        const val GET_BOOLEAN = "false"
+        const val GET_PREF = "0000"
     }
     private lateinit var pref: SharedPrefUtils
 
@@ -25,7 +25,7 @@ class SplashScreenActivity : BaseActivity() {
         setAnimation()
 
         handler.postDelayed({
-            if(pref.getBooleanPref(GET_BOOLEAN)!!) {
+            if(pref.getStringPref(GET_PREF) is String) {
                 startActivity(Intent(applicationContext, DashboardActivity::class.java))
             } else {
                 startActivity(Intent(applicationContext, IntroSliderActivity::class.java))

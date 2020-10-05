@@ -12,8 +12,8 @@
         android:id="@+id/offerFragment"
         android:enabled="true"
         android:menuCategory="secondary"
-        android:icon="@drawable/ic_offer"
-        android:title="@string/offer" />
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search" />
 
     <item
         android:id="@+id/projectFragment"

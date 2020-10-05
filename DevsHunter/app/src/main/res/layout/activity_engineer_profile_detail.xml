@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.engineerprofiledetail.EngineerProfileDetail">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.095"
+            android:src="@drawable/photo" />
+
+        <TextView
+            android:id="@+id/tv_engineer_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.036" />
+
+        <TextView
+            android:id="@+id/tv_engineer_profile_jobdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobdesc"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_profile_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_profile_name"
+            app:layout_constraintVertical_bias="0.019" />
+
+        <TextView
+            android:id="@+id/tv_engineer_profile_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_baseline_my_location_24"
+            android:text="Lokasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_profile_jobdesc"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_profile_jobdesc"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_profile_jobdesc"
+            app:layout_constraintVertical_bias="0.017" />
+
+        <TextView
+            android:id="@+id/tv_engineer_detail_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_profile_lokasi"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_profile_lokasi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_profile_lokasi"
+            app:layout_constraintVertical_bias="0.017" />
+
+        <TextView
+            android:id="@+id/tv_engineer_detail_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="30dp"
+            android:singleLine="false"
+            android:text="@string/lorem_ipsum"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_detail_status"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_detail_status"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_detail_status"
+            app:layout_constraintVertical_bias="0.015" />
+
+        <Button
+            android:id="@+id/btn_engineer_hire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hire"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_detail_deskripsi"
+            app:layout_constraintHorizontal_bias="0.453"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_detail_deskripsi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_detail_deskripsi"
+            app:layout_constraintVertical_bias="0.026" />
+
+        <TextView
+            android:id="@+id/tv_engineer_detail_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skill"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_engineer_hire"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_engineer_hire"
+            app:layout_constraintTop_toBottomOf="@+id/btn_engineer_hire"
+            app:layout_constraintVertical_bias="0.025" />
+
+        <TextView
+            android:id="@+id/tv_engineer_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_detail_skill"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_detail_skill"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_detail_skill"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/tv_engineer_detail_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:text="coentrao@gmail.com"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_skill"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_skill"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_skill"
+            app:layout_constraintVertical_bias="0.018" />
+
+        <TextView
+            android:id="@+id/tv_engineer_detail_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_baseline_contact_phone_24"
+            android:text="+6285624341817"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_engineer_detail_email"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engineer_detail_email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engineer_detail_email"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

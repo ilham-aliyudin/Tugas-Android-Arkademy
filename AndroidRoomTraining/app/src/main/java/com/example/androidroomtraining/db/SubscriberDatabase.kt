@@ -19,7 +19,7 @@ abstract class SubscriberDatabase: RoomDatabase() {
             synchronized(this) {
                 var instance = INSTANCE
                 if (instance == null) {
-                    instance = Room.databaseBuilder(
+                    instance = databaseBuilder(
                         context.applicationContext,
                         SubscriberDatabase::class.java,
                         "subscriber_data_database"

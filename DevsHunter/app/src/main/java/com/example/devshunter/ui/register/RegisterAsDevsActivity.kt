@@ -5,11 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.devshunter.R
-import com.example.devshunter.BaseActivity
 import com.example.devshunter.databinding.ActivityRegisterAsDevsBinding
-import com.example.devshunter.models.UserProfile
+import com.example.devshunter.models.RecruiterProfileEntity
 import com.example.devshunter.ui.login.LoginActivity
-import com.example.devshunter.ui.profile.ProfileActivity
+import com.example.devshunter.ui.profile.RecruiterProfileActivity
 
 class RegisterAsDevsActivity : AppCompatActivity() {
     companion object {
@@ -21,22 +20,22 @@ class RegisterAsDevsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register_as_devs)
 
-        binding.apply {
-            tvSignIn.setOnClickListener {
-                startActivity(Intent(application, LoginActivity::class.java))
-            }
-
-            btnDevRegister.setOnClickListener {
-                val name = etDevFullname.text.toString()
-                val email = etDevEmail.text.toString()
-                val adress = etDevAdress.text.toString()
-                val phone = etDevPhone.text.toString()
-                val devs = etProfileJobdesc.text.toString()
-                val userList = UserProfile(name, email, adress, phone, devs)
-                val intent = Intent(application, ProfileActivity::class.java)
-                intent.putExtra(EXTRA_PARCEL, userList)
-                startActivity(intent)
-            }
-        }
+//        binding.apply {
+//            tvSignIn.setOnClickListener {
+//                startActivity(Intent(application, LoginActivity::class.java))
+//            }
+//
+//            btnDevRegister.setOnClickListener {
+//                val name = etDevFullname.text.toString()
+//                val email = etDevEmail.text.toString()
+//                val adress = etDevAdress.text.toString()
+//                val phone = etDevPhone.text.toString()
+//                val devs = etProfileJobdesc.text.toString()
+//                val userList = RecruiterProfileEntity(name, email, adress, phone, devs)
+//                val intent = Intent(application, RecruiterProfileActivity::class.java)
+//                intent.putExtra(EXTRA_PARCEL, userList)
+//                startActivity(intent)
+//            }
+//        }
     }
 }

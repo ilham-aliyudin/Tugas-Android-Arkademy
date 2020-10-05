@@ -19,6 +19,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tv_recruiter_profile_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar_profile"
+                    app:layout_constraintVertical_bias="0.046" />
+
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar_profile"
                     android:layout_width="match_parent"
@@ -70,31 +81,130 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.appcompat.widget.Toolbar>
 
-                <WebView
-                    android:id="@+id/web"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/toolbar_profile"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/toolbar_profile"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar_profile"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ProgressBar
-                    android:id="@+id/progress_bar"
-                    style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Indeterminate"
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:progress="20"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/web"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar_profile" />
+                    android:layout_marginTop="20dp"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_img"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_img" />
+
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_jobdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_name"
+                    app:layout_constraintHorizontal_bias="0.448"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_name" />
+
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableStart="@drawable/ic_baseline_my_location_24"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_jobdesc"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_jobdesc"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_jobdesc" />
+
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/lorem_ipsum"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_location"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_location"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_location" />
+
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="52dp"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_recruiter_profile_update"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/btn_recruiter_profile_update"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_recruiter_profile_update" />
+
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableStart="@drawable/ic_baseline_contact_phone_24"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_email"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_email"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_email" />
+
+                <TextView
+                    android:id="@+id/tv_recruiter_profile_linkedin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/ic_baseline_supervised_user_circle_24"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_phone"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_phone" />
+
+                <Button
+                    android:id="@+id/btn_recruiter_profile_update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Update"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_desc" />
+
+
+                <!--                <WebView-->
+                <!--                    android:id="@+id/web"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="0dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/toolbar_profile"-->
+                <!--                    app:layout_constraintHorizontal_bias="1.0"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/toolbar_profile"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/toolbar_profile"-->
+                <!--                    app:layout_constraintVertical_bias="0.0" />-->
+
+                <!--                <ProgressBar-->
+                <!--                    android:id="@+id/progress_bar"-->
+                <!--                    style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Indeterminate"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:progress="20"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/web"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/toolbar_profile" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+            -->
         </FrameLayout>
 
         <com.google.android.material.navigation.NavigationView

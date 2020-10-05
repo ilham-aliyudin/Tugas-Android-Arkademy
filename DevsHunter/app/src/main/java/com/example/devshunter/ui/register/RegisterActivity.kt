@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.devshunter.R
-import com.example.devshunter.BaseActivity
+import com.example.devshunter.api.RetrofitInstance
 import com.example.devshunter.databinding.ActivityRegisterBinding
 import com.example.devshunter.ui.login.LoginActivity
 import com.example.devshunter.util.SharedPrefUtils
+import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {
     companion object {
@@ -24,19 +26,28 @@ class RegisterActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
         pref = SharedPrefUtils(this)
 
-        binding.apply {
-            tvRegisSignIn.setOnClickListener {
-                startActivity(Intent(application, RegisterAsDevsActivity::class.java))
-            }
 
+        binding.apply {
             btnRegister.setOnClickListener {
-                if (etEmail.text.toString().isNotEmpty() || etPassword.text.toString().isNotEmpty()) {
-                    pref.apply {
-                        savePref(SAVE_PREF, etEmail.text.toString())
-                        savePref(SAVE_PREF, etPassword.text.toString())
+                val username = etUsername.text.toString()
+                val email = etEmail.text.toString()
+                val password = etPassword.text.toString()
+                if (username.isNotEmpty() || email.isNotEmpty() || password.isNotEmpty()) {
+                    lifecycleScope.launch {
+                        try {
+                            RetrofitInstance.userApi.registerRequest(username, email, password, 1, 1, "2020")
+                            Toast.makeText(applicationContext, "Disimpan", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(applicationContext, LoginActivity::class.java))
+                        } catch (e: Throwable) {
+                            Toast.makeText(applicationContext, e.message.toString(), Toast.LENGTH_SHORT).show()
+                        }
                     }
-                    Toast.makeText(application, "Data Tersimpan", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(application, LoginActivity::class.java))
+//                    pref.apply {
+//                        savePref(SAVE_PREF, etEmail.text.toString())
+//                        savePref(SAVE_PREF, etPassword.text.toString())
+//                    }
+//                    Toast.makeText(application, "Data Tersimpan", Toast.LENGTH_SHORT).show()
+//                    startActivity(Intent(application, LoginActivity::class.java))
                 }
             }
         }
