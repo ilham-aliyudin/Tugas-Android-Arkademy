@@ -1,6 +1,5 @@
 package com.example.devshunter.ui.profile
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +9,6 @@ import com.example.devshunter.R
 import com.example.devshunter.databinding.ActivityProfileBinding
 import com.example.devshunter.db.RecruiterProfileDatabase
 import com.example.devshunter.models.RecruiterProfileEntity
-import com.example.devshunter.ui.fragment.home.HomeFragment
 import kotlinx.coroutines.launch
 
 class RecruiterProfileActivity : AppCompatActivity() {

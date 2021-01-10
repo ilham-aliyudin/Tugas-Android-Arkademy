@@ -2,26 +2,23 @@ package com.example.devshunter.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.animation.Animation
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.devshunter.R
-import com.example.devshunter.BaseActivity
-import com.example.devshunter.api.RetrofitInstance
+import com.example.devshunter.util.api.RetrofitInstance
 import com.example.devshunter.ui.register.RegisterActivity
 import com.example.devshunter.databinding.ActivityLoginBinding
-import com.example.devshunter.models.LoginResponse
 import com.example.devshunter.ui.dashboard.DashboardActivity
-import com.example.devshunter.ui.fragment.home.HomeFragment
-import com.example.devshunter.util.SharedPrefUtils
-import kotlinx.android.synthetic.main.activity_login.*
+import com.example.devshunter.util.sharedpreference.SharedPrefUtils
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
     companion object {
-        const val GET_PREF = "0000"
+        const val SAVE_PREF = "0000"
+        const val SAVE_USER_ID = "0"
         const val GET_BOOLEAN = "false"
     }
     private lateinit var pref: SharedPrefUtils
@@ -46,7 +43,10 @@ class LoginActivity : AppCompatActivity() {
                             val response = RetrofitInstance.userApi.loginRequest(loginName, loginPass)
                             if (response.isSuccessful) {
                                 val token = response.body()?.message?.token
-                                pref.savePref(GET_PREF, token!!)
+                                val id = response.body()?.message?.id
+                                Log.d("ID_User", id.toString())
+                                pref.savePref(SAVE_PREF, token!!)
+                                pref.saveIntPref(SAVE_USER_ID, id!!)
                                 startActivity(Intent(applicationContext, DashboardActivity::class.java))
                             } else {
                                 Toast.makeText(applicationContext, "Password/Email Salah",Toast.LENGTH_LONG).show()

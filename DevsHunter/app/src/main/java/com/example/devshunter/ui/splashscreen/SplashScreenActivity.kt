@@ -4,12 +4,11 @@ package com.example.devshunter.ui.splashscreen
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import androidx.appcompat.app.AppCompatDelegate
 import com.example.devshunter.R
 import com.example.devshunter.BaseActivity
 import com.example.devshunter.ui.dashboard.DashboardActivity
 import com.example.devshunter.ui.introslider.IntroSliderActivity
-import com.example.devshunter.util.SharedPrefUtils
+import com.example.devshunter.util.sharedpreference.SharedPrefUtils
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : BaseActivity() {

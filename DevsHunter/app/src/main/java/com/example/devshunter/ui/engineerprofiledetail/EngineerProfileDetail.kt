@@ -1,18 +1,12 @@
 package com.example.devshunter.ui.engineerprofiledetail
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import com.example.devshunter.R
 import com.example.devshunter.databinding.ActivityEngineerProfileDetailBinding
 import com.example.devshunter.models.EngineerModel
-import com.example.devshunter.models.EngineerResponse
-import com.example.devshunter.repository.EngineerRepository
-import com.example.devshunter.ui.fragment.home.HomeFragment
-import com.example.devshunter.ui.fragment.home.HomeViewModel
-import retrofit2.http.GET
+import com.example.devshunter.ui.dashboard.fragment.home.HomeFragment
 
 class EngineerProfileDetail : AppCompatActivity() {
 

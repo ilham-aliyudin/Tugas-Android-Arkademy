@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.devshunter.R
-import com.example.devshunter.api.RetrofitInstance
+import com.example.devshunter.util.api.RetrofitInstance
 import com.example.devshunter.databinding.ActivityRegisterBinding
 import com.example.devshunter.ui.login.LoginActivity
-import com.example.devshunter.util.SharedPrefUtils
+import com.example.devshunter.util.sharedpreference.SharedPrefUtils
 import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {

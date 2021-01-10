@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:paddingBottom="40dp"
+            tools:context=".dashboard.profile.FormProfileActivity">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Diri"
+                        android:textColor="@color/lupaSandi"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Nama Panjang"
+                        android:textColor="@color/normalFont"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/view3"
+                        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                    <EditText
+                        android:id="@+id/et_form_nama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_custom_editext_white"
+                        android:ems="10"
+                        android:hint="Masukkan Nama Panjang"
+                        android:inputType="textPersonName"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Job Title"
+                        android:textColor="@color/normalFont"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/et_form_nama"
+                        app:layout_constraintTop_toBottomOf="@+id/et_form_nama" />
+
+                    <EditText
+                        android:id="@+id/et_form_jobtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_custom_editext_white"
+                        android:ems="10"
+                        android:hint="Job Title"
+                        android:inputType="textPersonName"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Domisili"
+                        android:textColor="@color/normalFont"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/et_form_jobtitle"
+                        app:layout_constraintTop_toBottomOf="@+id/et_form_jobtitle" />
+
+                    <EditText
+                        android:id="@+id/et_form_domisili"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_custom_editext_white"
+                        android:ems="10"
+                        android:hint="Domisili"
+                        android:inputType="textPersonName"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Status"
+                        android:textColor="@color/normalFont"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/et_form_domisili"
+                        app:layout_constraintTop_toBottomOf="@+id/et_form_domisili" />
+
+                    <EditText
+                        android:id="@+id/et_form_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_custom_editext_white"
+                        android:ems="10"
+                        android:hint="Status"
+                        android:inputType="textPersonName"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Deskripsi"
+                        android:textColor="@color/normalFont"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/et_form_status"
+                        app:layout_constraintTop_toBottomOf="@+id/et_form_status" />
+
+                    <EditText
+                        android:id="@+id/et_form_deskripsi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_custom_editext_white"
+                        android:ems="10"
+                        android:hint="Deskripsi"
+                        android:maxLines="4"
+                        android:inputType="textPersonName"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_form_simpan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_blue"
+                android:text="Simpan"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <Button
+                android:id="@+id/btn_form_batal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0.9"
+                android:background="@drawable/btn_outlined_blue"
+                android:text="Batal"
+                app:layout_constraintEnd_toEndOf="@+id/btn_form_simpan"
+                app:layout_constraintStart_toStartOf="@+id/btn_form_simpan"
+                app:layout_constraintTop_toBottomOf="@+id/btn_form_simpan" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

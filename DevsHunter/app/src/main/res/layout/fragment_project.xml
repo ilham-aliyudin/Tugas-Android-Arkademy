@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@android:color/white"
-    tools:context=".ui.fragment.ProjectFragment">
+    tools:context=".ui.dashboard.fragment.project.ProjectFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,5 +32,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/toolbar_project"
             app:layout_constraintTop_toBottomOf="@+id/toolbar_project" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_project_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryLightColor"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="@+id/rv_container"
+            app:layout_constraintTop_toTopOf="@+id/rv_container"
+            app:layout_constraintVertical_bias="0.974" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

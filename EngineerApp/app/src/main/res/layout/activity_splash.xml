@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashscreen.SplashActivity">
+
+    <ImageView
+        android:id="@+id/iv_splash_icon"
+        android:layout_width="411dp"
+        android:layout_height="149dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_developer" />
+
+    <TextView
+        android:id="@+id/tv_splash_bottom_to_mid"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_splash_icon"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Devs Hunter"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_splash_icon"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_splash_icon"
+        app:layout_constraintTop_toBottomOf="@+id/iv_splash_icon"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/tv_by"
+        android:layout_width="67dp"
+        android:layout_height="21dp"
+        android:gravity="center"
+        android:text="by"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_splash_bottom_to_mid"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/tv_splash_bottom_to_mid"
+        app:layout_constraintTop_toBottomOf="@+id/tv_splash_bottom_to_mid"
+        app:layout_constraintVertical_bias="0.729" />
+
+    <ImageView
+        android:id="@+id/iv_arkademy"
+        android:layout_width="89dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_by"
+        app:layout_constraintStart_toStartOf="@+id/tv_by"
+        app:layout_constraintTop_toBottomOf="@+id/tv_by"
+        app:srcCompat="@drawable/self_taught" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

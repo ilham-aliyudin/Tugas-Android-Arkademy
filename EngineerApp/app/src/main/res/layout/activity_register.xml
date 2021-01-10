@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            tools:context=".register.RegisterActivity">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="7dp"
+                android:text="Signup"
+                android:textColor="@color/boldFont"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.036" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Lorem Ipsum Dolor Sit Ammet"
+                android:textColor="@color/normalFont"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="Nama"
+                android:textColor="@color/normalFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/et_nama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_custom_editext_white"
+                android:ems="10"
+                android:hint="Masukkan Nama Panjang"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Email"
+                android:textColor="@color/normalFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/et_nama"
+                app:layout_constraintTop_toBottomOf="@+id/et_nama" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_custom_editext_white"
+                android:ems="10"
+                android:hint="Masukkan Email"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="No Handphone"
+                android:textColor="@color/normalFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/et_email"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_custom_editext_white"
+                android:ems="10"
+                android:hint="Masukkan No Handphone"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Kata Sandi"
+                android:textColor="@color/normalFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/et_phone"
+                app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+            <EditText
+                android:id="@+id/et_kata_sandi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_custom_editext_white"
+                android:ems="10"
+                android:hint="Masukkan Kata Sandi"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Konfirmasi Kata Sandi"
+                android:textColor="@color/normalFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/et_kata_sandi"
+                app:layout_constraintTop_toBottomOf="@+id/et_kata_sandi" />
+
+            <EditText
+                android:id="@+id/et_konfirmasi_kata_sandi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_custom_editext_white"
+                android:ems="10"
+                android:hint="Konfirmasi Kata Sandi"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Button
+                android:id="@+id/btn_daftar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Daftar"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_custom_orange"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/et_konfirmasi_kata_sandi"
+                app:layout_constraintStart_toStartOf="@+id/et_konfirmasi_kata_sandi"
+                app:layout_constraintTop_toBottomOf="@+id/et_konfirmasi_kata_sandi" />
+
+            <TextView
+                android:id="@+id/textview9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Anda Sudah Punya Akun?"
+                android:textColor="@color/lupaSandi"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_daftar"
+                app:layout_constraintHorizontal_bias="0.301"
+                app:layout_constraintStart_toStartOf="@+id/btn_daftar"
+                app:layout_constraintTop_toBottomOf="@+id/btn_daftar" />
+
+            <TextView
+                android:id="@+id/tv_daftar_disini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk Disini"
+                android:textColor="@color/colorOrange"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textview9"
+                app:layout_constraintStart_toEndOf="@+id/textview9"
+                app:layout_constraintTop_toTopOf="@+id/textview9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

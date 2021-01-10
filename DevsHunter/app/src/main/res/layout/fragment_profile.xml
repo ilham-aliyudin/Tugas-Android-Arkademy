@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="@android:color/white"
         tools:openDrawer="end"
-        tools:context=".ui.fragment.ProfileFragment"
+        tools:context=".ui.dashboard.fragment.profile.ProfileFragment"
         android:id="@+id/profile_drawer">
 
         <FrameLayout
@@ -88,9 +88,8 @@
                     android:layout_marginTop="20dp"
                     android:text="TextView"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_img"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_img" />
 
                 <TextView
@@ -117,16 +116,14 @@
 
                 <TextView
                     android:id="@+id/tv_recruiter_profile_desc"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="12dp"
-                    android:layout_marginEnd="10dp"
                     android:text="@string/lorem_ipsum"
                     android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="@+id/tv_recruiter_profile_location"
-                    app:layout_constraintHorizontal_bias="0.487"
-                    app:layout_constraintStart_toStartOf="@+id/tv_recruiter_profile_location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_recruiter_profile_location" />
 
                 <TextView
@@ -214,6 +211,7 @@
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/drawer_profile_menu"
             android:fitsSystemWindows="true"
+            android:visibility="gone"
             android:layout_gravity="end" />
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
